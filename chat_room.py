@@ -13,6 +13,8 @@ def main(page:ft.page):
   user = ft.Text.Field(hint_Text = "Your name", with = 150)
   message = ft.Text.Field(hint_int = "Your message...", expand = True)
   send =ft.ElevatedButton("Send", on_click = Send_click)
+  page.add(messages, ft.Row(controls=[user, message, send]))
+ft.app(main, view=ft.AppView.WEB_BROWSER)
   
     
   
